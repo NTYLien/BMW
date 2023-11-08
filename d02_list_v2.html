@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="css/d02.css">
+    <style>
+        body{
+            background-image: url(images/theme.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h2 {
+            color: midnightblue;
+            
+        }
+        h3{
+            color: tomato;
+        }
+        p, dt{
+            font-weight: bold;
+            font-style: italic;
+            color: teal;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>List Demo</h2>
+    
+    <h3>Ordered List</h3>
+    <p>Favorite Breakfast Foods</p>
+    <ol>
+        <li>Banh mi</li>
+        <li>Bun Bo</li>
+        <li>Pho</li>
+        <li>Banh cuon</li>
+        <li>Bun mam</li>
+    </ol>
+
+    <p>Favorite Beverage</p>
+    <ol style="list-style-type:lower-alpha;">
+        <li>Sting</li>
+        <li>Sua</li>
+        <li>Nuoc suoi</li>
+        <li>Beer Craft</li>
+        <li>Ruou vang</li>
+    </ol>
+    <!-- Danh sach khong co so thu tu -->
+    <h3> Unordered List</h3>
+    <p>Famous Entertainment Parks</p>
+    <!-- dung li*4 se ra duoc 4 cai list ma khong can go -->
+    <ul style="list-style-type: square;"> 
+        <li>Cu Chi Water Park</li>
+        <li>Disney Land</li>
+        <li>Ba Na Hills</li>
+        <li>Universal</li>
+    </ul>
+    <!-- Danh sach dinh nghia. Trong do dt & dd la con cua dl & cung cap. Dd khoong phai la con cua Dt ma chi la giai nghia cho Dt. -->
+    <h3> Definition List</h3>
+    <!-- dl>(dt+dd)*2 -->
+    <dl> 
+        <dt><b>Microsoft Windows</b></dt>
+        <dd>Microsoft Windows is a group of OSs manufactured by Microsoft. Windows is available in 32 and 64-bit versions and offers a graphical user interface (GUI), multitasking functionalities, virtual memory management capabilities, and support for several peripheral devices. Windows OSs constitute client as well as server versions.</dd>
+        <dt><b>Photoshop</b></dt>
+        <dd>Adobe Photoshop is a raster graphics editor developed and published by Adobe Inc. for Windows and macOS.</dd>
+    </dl>
+    
+</body>
+</html>

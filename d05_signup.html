@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="./css/d04.css">
+    <link rel="stylesheet" href="./css/d04.form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h2>Christmas is coming to ... <span> Ginger Town</span> !! </h2>
+        </header>
+        <!-- Menu -->
+
+        <nav>
+            <a href="d04_layout.html">Home</a>
+            <a href="d05_products.html">Products</a>
+            <a href="d05_event.html">Events</a>
+            <a href="d05_blog.html">Blogs</a>
+            <a href="d05_aboutus.html">About Us</a>
+            <a href="d05_signup.html">Sign Up</a>
+            <a href="d04_login.html">Login</a>
+        </nav>
+        <!-- content -->
+        <section>
+            <!-- action chua tren trag web se hien thi khi user bam nut submit
+            method thong bao phuong thuc day du lieu nhap trong form len server:
+            - get(default): toan bo du lieu nhap xuat hien sau ten action page >>  dau ? 
+            - post: khong thay du lieu nhap xuat hien tren link
+            -->
+
+            <form action="./d04_layout.html" method="get">
+                <h4>Register</h4>
+                <div>
+                    <!-- id (chua ma dinnh danh cua o nhap lieu) de lap trinh front end, 
+                        name (chua ten cua ma dinh danh) de lap trinh back-end, lap trinh tren server
+                        value: chua gia tri cua o
+                        autofocus: dat con tro vao mot o nhap lieu
+                        patern: Qui uoc mau nhap lieu (rules)
+                    
+                    -->
+                    <label for="Username:">Username <span class="alert">*</span></label> <br />
+
+                    <input type="text" name="username" id="user" required value="guest" autofocus>
+
+                </div>
+                <br />
+                <div>
+                    <label for="Password: ">Password <span class="alert">*</span></label> <br />
+                    <input type="text" name="password" id="pass" required placeholder="Nhap mat khau" value="123">
+                </div>
+                <div>
+                    <label for="Confirm Password: ">Confirm Password <span class="alert">*</span></label> <br />
+                    <input type="text" name="passwordconfirm" id="passconfirm" required placeholder="Nhap lai mat khau"
+                        value="123">
+                </div>
+                <br />
+
+                <div>
+
+                    <label for="Email:">Email<span class="alert">*</span></label> <br />
+                    <input type="email" name="Email" id="Email" required value="abc@gmail.com">
+
+                </div>
+
+                <br />
+                <div>
+                    <!-- ? la co hay khong co cung duoc -->
+                    <label for="Phone:">Phone<span class="alert">*</span></label> <br />
+                    <input type="tel" name="Phone" id="Phone" required pattern="[+]?[0-9]{2,4}"
+                        title="format (+)xx(xx), x:digit" value="+911">
+
+
+                </div>
+                <br />
+                <div>
+                    <label for="Hobbies">Hobbies</label> <br />
+                    <input type="checkbox" name="travel" id="travel" checked
+                    value="traveling"> Traveling
+                    <input type="checkbox" name="sport" id="sport" value="sport"> Sport
+                    <input type="checkbox" name="game" id="game" value="games"> Games
+
+                </div>
+                <br/>
+                <div>
+                    <label for="Gender">Gender</label> <br />
+                    <input type="radio" name="Gender" id="male" checked value="male"> Traveling
+                    <input type="radio" name="Gender" id="female" value="female"> Sport
+                    <input type="radio" name="Gender" id="others" value="others"> Games
+
+                </div>
+                <br/>
+                <div>
+                    <label for="Hometown">Home Town</label>
+                    <select name="home" id="home" required>
+                    <option value="">-Select your home town-</option>
+                    <option value="hanoi">Ha Noi</option>
+                    <option value="hochiminh" selected>Ho Chi Minh</option>
+                    <option value="cantho">Can Tho</option>
+                    <option value="lamdong">Lam Dong</option>
+                </select>
+                </div>
+
+                <br/>
+                <div>
+                    <label for="'birthday">Birthday</label>
+                    <input type="date" name="" id="dob"
+                    value="2021-08-15">
+                </div>
+                <br/>
+                <div>
+                    <label for="Rating">Rating</label>
+                    <input type="number" name="rate" id="rate" required
+                    min="1" max="10" value="5">
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+
+                </div>
+
+               
+
+
+            </form>
+        </section>
+        <footer>
+            Copyright &copy; 2023 by Lien Nguyen. All Rights Reserved. Aptech T12309M1.
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-Demo</title>
+    <link rel="stylesheet" href="/css/d04.css">
+    <link rel="stylesheet" href="css/d04.form.css">
+
+</head>
+<body>
+    <h2>Javascript Demo</h2>
+    <p>Demo buid-in Functions</p>
+    <hr>
+    <input type="button" value="Alert()" id="btAlert">
+    <input type="button" value="Confirm" id="btConfirm">
+    <input type="button" value="Prompt" id="btPrompt">
+
+    
+</body>
+<!-- phan lap trinh ma kich ban -->
+<script>
+    // Lap trinh cho su kien click doi voi nut co id ="btAlert"
+document.getElementById("btAlert").onclick = function(){
+    alert("Hello, who you are?");
+}
+document.getElementById("btConfirm").onclick = function(){
+    var kq= confirm("Close window??");
+    if(kq=='true'){
+        //bam nut ok: tat cua so trinh duyet hien tai
+        window.close();
+
+    }
+}
+document.getElementById("btPrompt").onclick = function(){
+    var kq= prompt("What's your name??","Lina");
+    if(kq!=""){
+        var tuoi = parseInt(kq);
+        if(tuoi<18){
+            alert("Hello baby!");
+        } else {
+            alert("Hello Sir/Madam!");
+        }
+        
+
+    }
+}
+</script>
+</html>
