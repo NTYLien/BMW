@@ -1,0 +1,83 @@
+@import url(d04_webroot.css);
+h4 {
+    text-align: center;
+}
+form {
+    padding: 20px;
+    background-color: var(--blue);
+    /* background-image: url("../images/d04_headeranimation.gif"); */
+    color: var(--white);
+    width: fit-content;
+    box-shadow:  3px 3px 3px var(--gray);
+    margin: 20px 0px;
+}
+span.alert{
+    color: var(--red);
+}
+input[type='submit']{
+    color: white;
+    background-color: var(--red);
+    border-radius: 5px;
+    border: thin solid var(--red) ;
+    padding:  5px 20px;
+}
+
+input[type='reset']{
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+    border: thin solid var(--green);
+    padding:  5px 20px;
+}
+
+input[type='text']{
+    padding-right: 100px;
+}
+
+button[type='submit']{
+    color: white;
+    background-color: var(--red);
+    border-radius: 5px;
+    border: thin solid var(--red) ;
+    padding:  5px 20px;
+}
+
+button[type='reset']{
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+    border: thin solid var(--green);
+    padding:  5px 20px;
+}
+
+#btAlert{
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+    border: thin solid var(--green);
+    padding:  5px 20px;
+
+}
+
+#btConfirm{
+    color: white;
+    background-color: var(--red);
+    border-radius: 5px;
+    border: none;
+    padding:  5px 20px;
+
+}
+
+#btPrompt{
+    color: white;
+    background-color: var(--blue);
+    border-radius: 5px;
+    border: none;
+    padding:  5px 20px;
+
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}

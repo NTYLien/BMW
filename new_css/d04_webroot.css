@@ -1,0 +1,22 @@
+:root {
+    /* font */
+    --font: font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    /* colors */
+    --red: #BB2525;
+    --white: #FFF5E0;
+    --green: green;
+    --hoverRed: #BB2525;
+    --gray: gray;
+    --blue:#141E46;
+    --lightred: #FF6969;
+
+    /* spaces */
+    --space1: 1px;
+    --space2: 2px;
+    --space8: 8px;
+    --space16: 16px;
+    --space32: 32px;
+    --space64: 64px;
+
+}

@@ -1,0 +1,88 @@
+@import "./d04_webroot.css";
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--white);
+    /* background-image: url('/images/d04_headeranimation.gif'); */
+}
+header{
+    background-image: url(../images/d04_header.jpeg);
+    background-blend-mode: multiply;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: var(--white);
+    font-family: 'Homemade Apple', cursive;
+    text-align: center;
+    font-size: 2rem;
+}
+header span {
+    color: yellow;
+    text-shadow: 3px 3px 3px var(--lightred);
+}
+div.main {
+    width: 95vw;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--white);
+    box-sizing: border-box;
+  
+}
+
+
+
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+    margin: 0px 0px;
+    padding: 10px 10px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+nav a {
+    color: var(--red);
+    text-decoration-line: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+
+nav a:hover {
+    color: var(--white);
+    background-color: var(--red);
+}
+img .main{
+    width: 100%;
+}
+
+table{
+    border: thin solid var(--lightred);
+    padding: 10px;
+    box-shadow: 10px 10px var(--gray);
+}
+
+thead{
+    background-color: var(--red);
+    color: white;
+}
+thead > th {
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+td {
+    border: solid thin var(--gray);
+}
+
+tbody > tr:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+
+

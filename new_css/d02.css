@@ -1,0 +1,26 @@
+/* css ap dung cho cac trang d02 */
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    margin-top: 50px;
+    margin-left: 20px;
+    
+}
+
+h2 {
+    color: orange;
+    text-shadow: 3px 3px 3px lightgray;
+}
+h3 {
+    color: violet;
+}
+
+/* text-decoration dung de xoa gach chan cua duong link */
+a{
+    text-decoration: none; 
+}
+
+a:hover {
+    color: red;
+}

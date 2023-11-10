@@ -1,0 +1,97 @@
+@import "./d04_webroot.css";
+
+body {
+    background-color: var(--red);
+    background-image: url('/images/d04_headeranimation.gif');
+   
+}
+
+section>.products {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    margin-bottom: var(--space32);
+}
+
+
+.products img {
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+
+}
+
+.products:hover img {
+    border: 1px solid var(--green);
+}
+
+
+
+
+.products>button {
+    font-family: 'Josefin Sans', sans-serif;;
+    background-color: var(--green);
+    border: none;
+    padding: var(--space16);
+    color: var(--white);
+    font-weight: bold;
+    width: 50%;
+    margin: var(--space8);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+
+
+.products>button:hover {
+    background-color: var(--hoverRed);
+
+}
+
+.separator {
+    margin: var(--space8) auto;
+    height: var(--space2);
+    width: 50%;
+    background-color: var(--green);
+}
+
+.products h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #BB2525;
+    font-size: 1.2rem;
+}
+
+.products p {
+    margin: var(--space2);
+    font-size: 1.1rem;
+}
+
+.grayline {
+    margin: var(--space8) auto;
+    height: var(--space1);
+    width: 50%;
+    background-color: var(--gray);
+
+}
+
+.price {
+    margin-top: 0px;
+    color: var(--red);
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav{
+    margin-bottom: var(--space32)
+}
+
+  
+ 
+  
+
+  
+ 

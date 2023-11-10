@@ -1,0 +1,104 @@
+@import url(./css/d04_webroot.css);
+
+section{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 1.1rem;
+
+
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 50px 300px;
+    gap: var(--space64);
+    margin: 80px  160px 0px 160px;
+    padding: 0px 80px;
+    
+}
+
+.container h4{
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--blue);
+    font-style: bold;
+    
+    
+}
+.container h5{
+    font-size: 1.5rem;
+    padding:40px 0px 5px 10px;
+    margin: 0px;
+    text-align: center;
+    color: var(--red);
+}
+.container h6{
+    font-size: 1.3rem;
+    padding-bottom: 16px;
+    margin: 0px;
+    text-align: center;
+    color: var(--red);
+    
+}
+
+.gallary-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.gallary-item .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+
+}
+
+.gallary-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    padding: 20px;
+}
+
+.w-1 {
+    grid-column: span 1;
+}
+.w-2 {
+    grid-column: span 2;
+}
+.w-3 {
+    grid-column: span 3;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 3;
+}
+
+.gallary-item h4{
+    text-transform: uppercase;
+    align-content: center;
+}
+
+.gallary-item .text{
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/d04.css">
+    <link rel="stylesheet" href="./css/d04.form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h2>Christmas is coming to ... <span> Ginger Town</span> !! </h2>
+        </header>
+        <!-- Menu -->
+
+        <nav>
+            <a href="d04_layout.html">Home</a>
+            <a href="d05_products.html">Products</a>
+            <a href="d05_event.html">Events</a>
+            <a href="d05_blog.html">Blogs</a>
+            <a href="d05_aboutus.html">About Us</a>
+            <a href="d05_signup.html">Sign Up</a>
+            <a href="d04_login.html">Login</a>
+        </nav>
+        <!-- content -->
+        <section>
+            <!-- action chua tren trag web se hien thi khi user bam nut submit
+            method thong bao phuong thuc day du lieu nhap trong form len server:
+            - get(default): toan bo du lieu nhap xuat hien sau ten action page >>  dau ? 
+            - post: khong thay du lieu nhap xuat hien tren link
+            -->
+
+            <form action="./d04_layout.html" method="get" id="login-form">
+                <h4>Login</h4>
+                <div>
+                    <!-- id (chua ma dinnh danh cua o nhap lieu) de lap trinh front end, 
+                        name (chua ten cua ma dinh danh) de lap trinh back-end, lap trinh tren server
+                        value: chua gia tri cua o
+                        autofocus: dat con tro vao mot o nhap lieu
+                    
+                    -->
+                    <label for="Username:">Username <span class="alert">*</span></label> <br />
+
+                    <input type="text" name="username" id="user" 
+                    required 
+                    placeholder="Nhap ten tai khoan" 
+                    value="guest"
+                    autofocus
+                    
+                    >
+
+                </div>
+                <br />
+                <div>
+                    <label for="Password: ">Password <span class="alert">*</span></label> <br />
+                    <input type="text" name="password" id="pass" required placeholder="Nhap mat khau">
+                </div>
+                <br />
+                <div>
+                    <input type="checkbox" name="rem" id="rem"> Remember
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+
+                </div>
+
+
+            </form>
+        </section>
+        <footer>
+            Copyright &copy; 2023 by Lien Nguyen. All Rights Reserved. Aptech T12309M1.
+        </footer>
+    </div>
+    <!-- Lap trinh ma kich ban -->
+<script>
+// lap trinh cho su kien submit (Khi bam nut submit tren login form). Chi co event moi co submit thoi 
+document.getElementById('login-form').onsubmit = function(event){
+
+event.preventDefault();// tat xu ly mac dinh cua nut submit
+// lay cac du kien nhap trong form
+var user = document.getElementById("user").value;
+var pass = document.getElementById("pass").value;
+
+
+if(user=="aptech"){
+    if(pass=="123"){
+        alert("Welcome to my website!");
+        window.location.href="d05_products.html"
+    } else {
+        alert("Wrong password, please retry!");
+        document.getElementById("pass").focus();
+    }
+} else {
+    alert("You haven't registered yet, please sign up!");
+    window.location.href="d05_signup.html";
+}
+
+
+}
+</script>
+</body>
+
+</html>

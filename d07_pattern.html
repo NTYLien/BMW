@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+    <link rel="stylesheet" href="css/d04.css">
+    <link rel="stylesheet" href="css/d04.form.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Regular Expression Pattern Demo</h2>
+        <hr>
+
+        <form action="" id="form_input">
+            <div>
+                <label for="">fullname</label>
+                <input type="text" name="fname" id="fname" required value="dao son" title="only characters or blank" pattern="[a-z A-Z]+">
+            </div>
+
+            <div>
+                <label for="">telephone</label>
+                <input type="text" name="phone" id="phone" required value="123 12345" title="xxx xxxxx[xxx], x:digits " 
+                pattern="\d{3} \d{5,8}">
+            </div>
+
+            <br>
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <!-- Kiem tra du lieu nhap sau khi nguoi dung bam nut submit -->
+    <script>
+        //lap trinh cho su kien [submit] cua form input
+        document.getElementById("form_input").onsubmit = function (event) {
+            //vo hieu hoa chuc nang cua nut submit
+            event.preventDefault();
+
+            //lay du lieu nhap tren form 
+            let name = new String(document.getElementById("fname").value).trim()  ;//ham trim dung de cat cac khoang trang o dau va cuoi
+            let phone = new String(document.getElementById("phone").value).trim()  ;
+
+            
+
+            //tao 1 array chua ten nguoi dung va so dien thoai nhap tren form
+            let a = []; 
+            //mang a moi duoc khai bao, rỗng chua co du lieu
+            /* Chuoi ky tu trong javascript: dat trong nhay doi hoac nhay don "hello"/ 'hello'
+                       let tb = "hello";
+                       let x = 123;
+                       >> De print: "hello 123": let kQ = tb + " " + x  >> kQ = "hello 123"
+           
+                       Chuoi dac biet (template literal): Su dung dau nhay huyen:
+                       let tb = 'hello';
+                       let x = 123;
+                       let kQ = `${tb} ${x}` >> kQ = "hello 123"
+                       */
+            a.push(`YOUR PROFILE \n`);
+            a.push(`- fullname: ${name}`); //a[0] = `-fullname: ${name}`
+            a.push(`- phone: ${phone}`)//a[1] = `-phone: ${phone}`
+
+            //Xuat noi dung cua mang a[] len hop thoai thong bao arlert()
+            alert(a.join("\n"));
+
+        }
+    </script>
+</body>
+
+</html>

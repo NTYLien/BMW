@@ -1,0 +1,89 @@
+@import url(./d04_webroot.css);
+
+
+.title h3{
+    font-size: 40px;
+    color: var(--green);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.title p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.container {
+    max-width: 1224px;
+    margin: auto;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: var(--space16);
+
+}
+
+.column {
+    display: flex;
+    flex-direction:column;
+    gap: var(--space8);
+    text-align: center;
+    padding-bottom: var(--space64);
+
+}
+
+.column .photo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+.column .photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    object-position: 50% 50%;
+    transition: .5s ease-in-out;
+
+}
+
+.photo:hover img{
+    transform: scale(1.2);
+}
+
+.item{
+    position: relative;
+    text-align: center;
+}
+
+.item .text {
+    opacity: 0;
+    position:absolute;
+    top: 40%;
+    text-align: center;
+    color: var(--white);
+    font-size: 18px;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+
+.item:hover .text {
+    opacity: 1;
+    padding: var(--space8);
+    width: 100%; 
+    background-color: #228b22;
+    border-radius: 8px;
+   
+
+}
+
+
+
+
+

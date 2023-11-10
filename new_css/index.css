@@ -1,0 +1,29 @@
+/* style sheet danh cho index.html */
+
+body{
+background-color: aqua;
+}
+
+p{
+font-size: 2rem;
+
+
+}
+h2 {
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 2rem;
+color:  red;
+text-shadow: 3px 4px 20px yellow;
+}
+
+button {
+    background-color: green;
+    color: wheat;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: solid thin;
+    box-shadow: 3px 3px 3px gray;
+}

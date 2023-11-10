@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <link rel="stylesheet" href="css/d04.css">
+    <link rel="stylesheet" href="css/d04.form.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Function Demo</h2>
+        <hr />
+        <form action="" onsubmit="printBill();">
+            <h4>Order</h4>
+            <div>
+                <label for="">Product</label>
+                <select name="pro" id="pro" required 
+                onchange="getPrice();">
+                    
+                    <option value="">-- select any product -- </option>
+                    <option value="12000">Coca Cola</option>
+                    <option value="11000">Pepsi Cola</option>
+                    <option value="10000">7Up</option>
+                    <option value="15000">Snack</option>
+                </select>
+
+                <br>
+                <br>
+                <div>
+                    <label for="">Unit Price</label>
+                    <input type="text" name="price" id="price" readonly>
+                </div>
+
+               
+                <br>
+                <div>
+                    <label for="">Quantity</label>
+                    <input type="number" name="qty" id="qty" required min="1" max="100" value="1">
+                </div>
+
+              
+                
+            </div>
+            <br>
+            <div>
+                <button type="submit">Order</button>
+                <button type="reset">Reset</button>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- Ma kich ban xu ly viec thay doi san pham > doi don gia va in bill khi bam nut submit -->
+<script>
+    //ham lay don gia cua san pham duoc chon tren o product
+
+    function getPrice(){
+            let sp = document.getElementById("pro");
+
+            let don_gia = sp.value;
+            console.log(`don gia = ${don_gia}`);
+
+            document.getElementById("price").value = don_gia;
+        }
+
+        //ham in bill ra hop thong bao alert, khi user bam nut [order]
+        function printBill(){
+            //khai bao mang a[] chua cac dong noi dung cua 1 hoa don
+            let a = ["Bill Detail \n"];
+
+            let sp = document.getElementById("pro");
+            let tensp = sp.options[sp.selectedIndex].text;
+            let don_gia = sp.value;
+
+            a.push(` - Product: ${tensp}`);
+            a.push(` - Unit price: ${don_gia}`);
+
+            let sl = parseInt(document.getElementById("qty").value);
+            const amt = sl * don_gia;
+
+            a.push(` - Quantity: ${sl}`);
+            a.push(` -----------------`);
+            a.push(`   AMOUNT: ${amt} `);
+
+            alert(a.join('\n'));
+        }
+
+</script>∏
+</body>
+
+</html>
