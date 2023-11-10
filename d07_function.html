@@ -77,13 +77,12 @@
 
             a.push(` - Product: ${tensp}`);
             a.push(` - Unit price: ${don_gia}`);
-
             let sl = parseInt(document.getElementById("qty").value);
             const amt = sl * don_gia;
 
             a.push(` - Quantity: ${sl}`);
             a.push(` -----------------`);
-            a.push(`   AMOUNT: ${amt} `);
+            a.push(` AMOUNT: ${amt} `);
 
             alert(a.join('\n\n'));
         }
